@@ -1,0 +1,111 @@
+@import 'vars';
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 24px;
+    border-bottom: 1px solid var(--bordo);
+    position: sticky;
+    background-color: var(--bordo);
+    border-radius: 30px;
+    transition: margin-top 0.5s ease-out;
+	  z-index: 997;
+	  margin-top: 40px;
+    margin-left: 80px;
+    margin-right: 80px;
+  }
+
+  .header.hide {
+    margin-top: 0;
+  }
+
+  .menu {
+    display: none;
+    width: 44px;
+    height: 44px;
+  }
+  
+  .logo1 {
+    width: 70px;
+    height: 45px;
+    padding-right: 20px;
+  }
+  
+  .navbar-izquierda ul,
+  .navbar-derecha ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    height: 60px;
+  }
+  .navbar-izquierda {
+    display: flex;
+  }
+  .navbar-izquierda ul {
+    margin-left: 12px;
+  }
+  
+  .navbar-izquierda li,
+  .navbar-derecha li {
+    padding: 5px;
+  }
+  
+  .navbar-izquierda ul li a,
+  .navbar-derecha ul li a {
+    text-decoration: none;
+    color: var(--blanco);
+    //border: 1px solid var(--blanco);
+    padding: 8px;
+    border-radius: 8px;
+  }
+  
+  .navbar-izquierda ul li a:hover,
+  .navbar-derecha ul li a:hover {
+    border: 1px solid var(--bordo2);
+    //background-color: var(--blanco);
+    color: var(--bordo2);
+  }
+  
+  .navbar-email {
+    color: var(--bordo);
+    font-size: var(--sn);
+    margin-left: 12px;
+    padding: 10px;
+    text-transform: uppercase;
+  }
+  .navbar-carrito {
+    position: relative;
+    padding: 10px;
+  }
+  .navbar-carrito div {
+    width: 16px;
+    height: 16px;
+    background-color: var(--bordo);
+    border-radius: 50%;
+    font-size: var(--sm);
+    font-weight: bold;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .carrito {
+    width: 44px;
+    height: 44px;
+  }
+  
+  @media (max-width: 640px) {
+    .menu {
+      display: block;
+    }
+    .navbar-izquierda ul {
+      display: none;
+    }
+    .navbar-email {
+      display: none;
+    }
+  }
